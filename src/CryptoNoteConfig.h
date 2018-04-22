@@ -10,9 +10,9 @@
 namespace CryptoNote {
 namespace parameters {
 
-const uint64_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
-const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
-const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
+const uint64_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 5000000;
+const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 5000000;
+const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 10000000;
 //TODO Currency-specific address prefix
 const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x43;
 //TODO Choose maturity period for your currency
@@ -39,7 +39,7 @@ const uint64_t MINIMUM_FEE                                   = 5000;
 const uint64_t DEFAULT_DUST_THRESHOLD                        = MINIMUM_FEE;
 
 //TODO Define preferred block's target time
-const uint64_t DIFFICULTY_TARGET                             = 10; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 1; // seconds
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
 //TODO There are options to tune CryptoNote's difficulty retargeting function.
 //TODO We recommend not to change it.
@@ -48,7 +48,7 @@ const size_t   DIFFICULTY_CUT                                = 60;  // timestamp
 const size_t   DIFFICULTY_LAG                                = 15;
 static_assert(2 * DIFFICULTY_CUT <= DIFFICULTY_WINDOW - 2, "Bad DIFFICULTY_WINDOW or DIFFICULTY_CUT");
 
-const size_t   MAX_BLOCK_SIZE_INITIAL                        =  20 * 1024;
+const size_t   MAX_BLOCK_SIZE_INITIAL                        =  1 * 1024;
 const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_NUMERATOR         = 100 * 1024;
 const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_DENOMINATOR       = 365 * 24 * 60 * 60 / DIFFICULTY_TARGET;
 
